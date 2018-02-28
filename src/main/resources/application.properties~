@@ -1,0 +1,6 @@
+logging.file=logs/token-exchange-poc.log
+logging.level.root=INFO
+#logging.level.org.eclipse.jetty=DEBUG
+
+endpoints.enabled=false
+endpoints.health.enabled=true

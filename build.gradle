@@ -1,0 +1,38 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.9.RELEASE'
+    }
+    repositories {
+        jcenter()
+        mavenLocal()
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+    }
+}
+
+apply plugin: 'scala'
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'maven'
+apply plugin: 'eclipse-wtp'
+
+group = 'com.iqmsoft'
+version = '1.0'
+
+repositories {
+    jcenter()
+    mavenLocal()
+}
+
+dependencies {
+    compile "org.scala-lang:scala-library:2.11.8"
+    compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.boot:spring-boot-starter-jetty"
+    compile "org.springframework.boot:spring-boot-starter-actuator"
+    compile "org.scalatra:scalatra_2.11:2.5.0"
+
+    testCompile "junit:junit:4.12"
+    testCompile "org.scalatest:scalatest_2.11:2.2.6"
+    testRuntime "org.scala-lang.modules:scala-xml_2.11:1.0.5"
+}
